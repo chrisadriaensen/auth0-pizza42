@@ -17,7 +17,7 @@ app.get('/api/order', function(req, res) {
 
 });
 
-app.post('/api/order'), function(req, res) {
+app.post('/api/order', function(req, res) {
 
   var order = { id:3, type: 'Funghi' };
 
