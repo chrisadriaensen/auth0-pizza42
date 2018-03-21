@@ -63,7 +63,7 @@ export class AuthService {
     if (accessToken) {
       this.auth0.client.userInfo(accessToken, (err, profile) => {
         result(err, profile);
-      }
+      });
     }
   }
 
