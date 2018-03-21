@@ -13,7 +13,9 @@ import { AuthService } from './auth/auth.service';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
