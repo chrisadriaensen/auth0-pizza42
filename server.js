@@ -7,7 +7,7 @@ const rsaValidation = require('auth0-api-jwt-rsa-validation');
 // Serve only the static files from the dist directory
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/orders', function(req, res){
+app.get('/api/orders', function(req, res){
   var orders = [
     { id: 1, type: 'Margherita'},
     { id: 2, type: 'Quatro Fromaggio'}
