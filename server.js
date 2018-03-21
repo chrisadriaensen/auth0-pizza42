@@ -1,8 +1,7 @@
 //Install express server
 const express = require('express');
 const app = express();
-const jwt = require('express-jwt');
-const rsaValidation = require('auth0-api-jwt-rsa-validation');
+const path = require('path');
 
 // Serve only the static files from the dist directory
 app.use(express.static(__dirname + '/dist'));
