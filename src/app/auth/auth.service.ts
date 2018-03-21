@@ -11,7 +11,7 @@ export class AuthService {
     clientID: '9A_RwMFtN1RPylDgkGL7z-1LOQUS1sTP',
     responseType: 'token id_token',
     audience: 'https://go-pizza42.eu.auth0.com/userinfo',
-    redirectUri: 'http://pizza42-auth0.herokuapp.com/#/callback',
+    redirectUri: 'http://pizza42-auth0.herokuapp.com/callback',
     scope: 'openid'
   });
 
