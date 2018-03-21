@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import * as auth0 from 'auth0-js';
 
 @Injectable()
@@ -13,9 +14,7 @@ export class AuthService {
   constructor(public router: Router) {}
 
   public login(): void {
-    this.auth0.authorize({
-      connection: 'facebook'
-    });
+    this.auth0.authorize();
   }
 
 }
