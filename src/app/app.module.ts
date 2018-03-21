@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -11,8 +10,7 @@ import { AuthService } from './auth/auth.service';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule
+    BrowserModule
   ],
   providers: [
     AuthService
