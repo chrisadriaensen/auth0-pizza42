@@ -20,7 +20,7 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES, useHash: false)
+    RouterModule.forRoot(ROUTES, { useHash: false })
   ],
   providers: [
     AuthService

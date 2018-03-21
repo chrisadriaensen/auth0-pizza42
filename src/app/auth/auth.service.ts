@@ -12,7 +12,7 @@ export class AuthService {
     responseType: 'token id_token',
     audience: 'https://go-pizza42.eu.auth0.com/userinfo',
     redirectUri: 'http://pizza42-auth0.herokuapp.com/callback',
-    scope: 'openid'
+    scope: 'openid profile'
   });
 
   constructor(public router: Router) {}
