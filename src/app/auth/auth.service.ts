@@ -26,9 +26,9 @@ export class AuthService {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         this.setSession(authResult);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/profile']);
       } else if (err) {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/']);
         console.log(err);
       }
     });
@@ -56,6 +56,15 @@ export class AuthService {
     // Access Token's expiry time
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
+  }
+
+  public getProfile(result): void {
+    const accessToken = localStorage.getItem('access_token');
+    if (accessToken) {
+      this.auth0.client.userInfo(accessToken, (err, profile) => {
+        result(err, profile);
+      }
+    }
   }
 
 }
