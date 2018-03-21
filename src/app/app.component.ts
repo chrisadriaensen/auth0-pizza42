@@ -10,7 +10,7 @@ import { AuthService } from './auth/auth.service';
 export class AppComponent implements OnInit {
   title = 'Pizza 42';
 
-  var apiToken = any;
+  apiToken = any;
   
   constructor(public auth: AuthService, public http: HttpClient) {
     this.auth.handleAuthentication();
