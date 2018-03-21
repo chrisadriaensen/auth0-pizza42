@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
