@@ -6,13 +6,23 @@ const path = require('path');
 // Serve only the static files from the dist directory
 app.use(express.static(__dirname + '/dist'));
 
-app.get('/api/orders', function(req, res){
+app.get('/api/order', function(req, res) {
+  
   var orders = [
     { id: 1, type: 'Margherita'},
     { id: 2, type: 'Quatro Fromaggio'}
   ];
 
   res.json(orders);
+
+});
+
+app.post('/api/order'), function(req, res) {
+
+  var order = { id:3, type: 'Funghi' };
+
+  res.json(order);
+
 });
 
 app.get('/*', function (req, res) {
