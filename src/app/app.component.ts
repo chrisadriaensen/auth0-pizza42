@@ -6,13 +6,11 @@ import { AuthService } from './auth/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements {
+export class AppComponent {
   title = 'Pizza 42';
-
-  var apiToken;
   
   constructor(public auth: AuthService) {
-    this.auth.handleAuthentication();
+    auth.handleAuthentication();
   }
 
 }
