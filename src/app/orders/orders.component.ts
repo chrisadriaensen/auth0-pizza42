@@ -17,12 +17,8 @@ export class OrdersComponent implements OnInit {
    
     this.http.get('http://pizza42-auth0.herokuapp.com/api/orders', {
       headers: new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('access_token'))
-    }).pipe(
-      map(res => res.json()),
-      catchError(error => console.log(error))
-    ).subscribe(
-      data => this.orders = data.message,
-      error => this.orders = error
+    }).subscribe(
+      data => this.orders = data
     );
 
   }
