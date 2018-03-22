@@ -10,7 +10,7 @@ export class AuthService {
     domain:   'go-pizza42.eu.auth0.com',
     clientID: '9A_RwMFtN1RPylDgkGL7z-1LOQUS1sTP',
     responseType: 'token id_token',
-    audience: 'https://pizza42-auth0.herokuapp.com/api/',
+    audience: 'http://pizza42-auth0.herokuapp.com/api/',
     redirectUri: 'http://pizza42-auth0.herokuapp.com',
     scope: 'openid profile read:orders place:order'
   });
