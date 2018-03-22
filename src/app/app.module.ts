@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
-import { OrdersComponent } from './orders/orders.component';
+import { OrderComponent } from './order/order.component';
 
 import { AuthService } from './auth/auth.service';
 
@@ -17,7 +17,7 @@ import { ROUTES } from './app.routes';
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    OrdersComponent
+    OrderComponent
   ],
   imports: [
     BrowserModule,

@@ -24,27 +24,16 @@ var jwtCheck = jwt({
 
 app.use('/api/*', jwtCheck);
 
-app.get('/api/orders', function(req, res) {
+app.get('/api/order', function(req, res) {
   
-  var orders = [
-    { id: 1, type: 'Margherita'},
-    { id: 2, type: 'Quatro Fromaggio'}
-  ];
-
-  res.json(orders);
-
-});
-
-app.post('/api/orders', function(req, res) {
-
-  var order = { id:3, type: 'Funghi' };
-
-  res.json(order);
+  res.json({ id: 1, type: 'Pizza Margherita', payment: 'cash'});
 
 });
 
 app.get('/*', function (req, res) {
+
   res.sendFile(path.join(__dirname + '/dist/index.html'));
+
 });
 
 // Start the app by listening on the default Heroku port

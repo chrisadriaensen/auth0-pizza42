@@ -1,24 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map, catchError } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-orders',
-  templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  selector: 'app-order',
+  templateUrl: './order.component.html',
+  styleUrls: ['./order.component.css']
 })
-export class OrdersComponent implements OnInit {
+export class OrderComponent implements OnInit {
 
-  orders: any;
+  order: any;
 
   constructor(public http: HttpClient) {}
 
   ngOnInit() {
    
-    this.http.get('http://pizza42-auth0.herokuapp.com/api/orders', {
+    this.http.get('http://pizza42-auth0.herokuapp.com/api/order', {
       headers: new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('access_token'))
     }).subscribe(
-      data => this.orders = data
+      data => this.order = data
     );
 
   }
