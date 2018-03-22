@@ -12,7 +12,7 @@ export class AuthService {
     responseType: 'token id_token',
     audience: 'http://pizza42-auth0.herokuapp.com/api/',
     redirectUri: 'http://pizza42-auth0.herokuapp.com',
-    scope: 'openid profile read:orders place:order'
+    scope: 'openid profile order'
   });
   
   userProfile: any;
