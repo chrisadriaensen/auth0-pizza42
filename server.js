@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const jwt = require('express-jwt');
+const jwtAuthz = require('express-jwt-authz');
 const jwks = require('jwks-rsa');
 
 // Serve only the static files from the dist directory
@@ -23,6 +24,8 @@ var jwtCheck = jwt({
 });
 
 app.use('/api/*', jwtCheck);
+
+app.use('/api/order', jwtAuthz(['order']));
 
 app.get('/api/order', function(req, res) {
   
