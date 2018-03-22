@@ -17,7 +17,7 @@ var jwtCheck = jwt({
     jwksUri: 'https://go-pizza42.eu.auth0.com/.well-known/jwks.json'
   }),
   audience: 'http://pizza42-auth0.herokuapp.com/api/',
-  issuer: 'https://go-pizza42.eu.autho.com/',
+  issuer: 'https://go-pizza42.eu.auth0.com/',
   algorithms: ['RS256']
 
 });
