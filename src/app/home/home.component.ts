@@ -15,9 +15,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-    accessToken = localStorage.getItem('access_token');
-    idToken = localStorage.getItem('id_token');
-    expiresAt = localStorage.getItem('expires_at');   
+    this.accessToken = localStorage.getItem('access_token');
+    this.idToken = localStorage.getItem('id_token');
+    this.expiresAt = localStorage.getItem('expires_at');   
 
   }
 
