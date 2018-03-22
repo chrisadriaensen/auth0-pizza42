@@ -10,10 +10,12 @@ export class AuthService {
     domain:   'go-pizza42.eu.auth0.com',
     clientID: '9A_RwMFtN1RPylDgkGL7z-1LOQUS1sTP',
     responseType: 'token id_token',
-    audience: 'https://go-pizza42.eu.auth0.com/userinfo',
+    audience: 'https://pizza42-auth0.herokuapp.com/api/',
     redirectUri: 'http://pizza42-auth0.herokuapp.com',
-    scope: 'openid profile'
+    scope: 'openid profile read:orders place:order'
   });
+  
+  userProfile: any;
 
   constructor(public router: Router) {}
 
@@ -58,13 +60,21 @@ export class AuthService {
     return new Date().getTime() < expiresAt;
   }
 
-  public getProfile(result): void {
+  public getProfile(cb): void {
     const accessToken = localStorage.getItem('access_token');
-    if (accessToken) {
-      this.auth0.client.userInfo(accessToken, (err, profile) => {
-        result(err, profile);
-      });
-    }
+    if (!accessToken) {
+      throw new Error('Access Token must exist to fetch profile');
+    }    
+
+    const self = this;
+    this.auth0.client.userInfo(accessToken, (err, profile) => {
+      if (profile) {
+        self.userProfile = profile;
+      }
+
+      cb(err, profile);
+    });
+
   }
 
 }

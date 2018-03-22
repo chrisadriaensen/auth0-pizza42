@@ -24,7 +24,7 @@ var jwtCheck = jwt({
 
 app.use('/api/*', jwtCheck);
 
-app.get('/api/order', function(req, res) {
+app.get('/api/orders', function(req, res) {
   
   var orders = [
     { id: 1, type: 'Margherita'},
@@ -35,7 +35,7 @@ app.get('/api/order', function(req, res) {
 
 });
 
-app.post('/api/order', function(req, res) {
+app.post('/api/orders', function(req, res) {
 
   var order = { id:3, type: 'Funghi' };
 
