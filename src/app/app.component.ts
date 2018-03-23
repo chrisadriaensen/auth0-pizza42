@@ -10,7 +10,8 @@ export class AppComponent {
   title = 'Pizza 42';
   
   constructor(public auth: AuthService) {
-    this.auth.handleAuthentication();
+    auth.handleAuthentication();
+    auth.scheduleRenewal();
   }
 
 }

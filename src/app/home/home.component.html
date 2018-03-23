@@ -1,4 +1,19 @@
-<h3> Welcome!!! </h3>
-<pre>{{ accessToken | json }}</pre>
-<pre>{{ idToken | json }}</pre>
-<pre>{{ expiresAt | json }}</pre>
+</br>
+<h3>HOME</h3>
+</br>
+<div *ngIf="accessToken">
+  <h2>Access Token</h2>
+  <pre>{{ accessToken | json }}</pre>
+</div>
+<div *ngIf="idToken">
+  <h2>ID Token</h2>
+  <pre>{{ idToken | json }}</pre>
+</div>
+<div *ngIf="expiresAt">
+  <h2>Expires At</h2>
+  <pre>{{ expiresAt | json }}</pre>
+</div>
+<div *ngIf="scopes">
+  <h2>Scopes</h2>
+  <pre>{{ scopes | json }}</pre>
+</div>

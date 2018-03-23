@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   accessToken: any;
   idToken: any;
   expiresAt: any;
+  scopes: any;
 
   constructor() {}
 
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
     this.accessToken = localStorage.getItem('access_token');
     this.idToken = localStorage.getItem('id_token');
     this.expiresAt = localStorage.getItem('expires_at');   
+    this.scopes = localStorage.getItem('scopes');
 
   }
 
