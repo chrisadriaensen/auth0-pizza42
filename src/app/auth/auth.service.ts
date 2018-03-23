@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Observable } from '@angular/core';
 import { Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { filter, mergeMap } from 'rxjs/operators';
 import * as auth0 from 'auth0-js';
 
 @Injectable()
@@ -18,7 +18,7 @@ export class AuthService {
   });
   
   userProfile: any;
-  refreshSubscription: any;
+  refreshSub: any;
 
   constructor(public router: Router) {}
 
