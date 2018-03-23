@@ -1,6 +1,7 @@
-import { Injectable, Observable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { filter, mergeMap } from 'rxjs/operators';
+import { Observable } from "rxjs/Rx"
 import * as auth0 from 'auth0-js';
 
 @Injectable()
