@@ -10,8 +10,8 @@ export class AuthService {
   requestedScopes: string = 'openid profile email order';
 
   auth0 = new auth0.WebAuth({ 
-    domain:   'go-pizza42.eu.auth0.com',
-    clientID: '9A_RwMFtN1RPylDgkGL7z-1LOQUS1sTP',
+    domain:   'chrisadriaensen.eu.auth0.com',
+    clientID: 'JI5Asi1HnSAlKTcVPVGnZXIwRk9QsP1o',
     responseType: 'token id_token',
     audience: 'http://pizza42-auth0.herokuapp.com/api/',
     redirectUri: 'http://pizza42-auth0.herokuapp.com',
